@@ -24,7 +24,8 @@ app.include_router(auth.router)
 async def root():
     return {
             "Greeting": "Hello there!",
-            "What is this?": "This is a REST API server created demonstrate my ability to create REST Endpoints and deploy them",
+            "What is this?": "This is a REST API server which demonstrates a preliminary version of https://api.tncars.pp.ua/docs",
+            "Why this?": "I plan to use the original server https://api.tncars.pp.ua for production IRL",
             "Author": "Berin Aniesh <https://berinaniesh.xyz>",
             "Documentation": "https://rest-demo.berinaniesh.pp.ua/docs",
             "Framework": "FastAPI",
@@ -33,4 +34,4 @@ async def root():
             "Database": "Postgesql",
             "Git Repo": "https://github.com/berinaniesh/rest-demo.git",
             "Contact": "berinaniesh@gmail.com"
-            }
+     }
