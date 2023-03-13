@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routers import user, post, vote, auth
+import json, typing
+from starlette.responses import Response
 
 app = FastAPI()
 
@@ -20,7 +22,19 @@ app.include_router(vote.router)
 app.include_router(auth.router)
 
 
-@app.get("/")
+class PrettyJSONResponse(Response):
+    media_type = "application/json"
+
+    def render(self, content: typing.Any) -> bytes:
+        return json.dumps(
+            content,
+            ensure_ascii=False,
+            allow_nan=False,
+            indent=4,
+            separators=(", ", ": "),
+        ).encode("utf-8")
+
+@app.get("/", response_class=PrettyJSONResponse)
 async def root():
     return {
             "Greeting": "Hello there!",
@@ -34,4 +48,4 @@ async def root():
             "Database": "Postgesql",
             "Git Repo": "https://github.com/berinaniesh/rest-demo.git",
             "Contact": "berinaniesh@gmail.com"
-     }
+            }
