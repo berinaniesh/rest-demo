@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "tncars-fastapi"
+version = "0.1.0"
+description = "Buy and sell cars and bikes"
+authors = ["Berin Aniesh <berinaniesh@gmail.com>"]
+readme = "README.md"
+packages = [{include = "tncars_fastapi"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.92.0"
+sqlalchemy = "^2.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
