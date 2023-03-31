@@ -38,14 +38,13 @@ class PrettyJSONResponse(Response):
 async def root():
     return {
             "Greeting": "Hello there!",
-            "What is this?": "This is a REST API server which demonstrates a preliminary version of https://api.tncars.pp.ua/docs",
-            "Why this?": "I plan to use the original server https://api.tncars.pp.ua for production IRL",
+            "What is this?": "A RESTful backend for a CRUD Application",
+            "Authentication": "JWT",
+            "Database": "Postgesql",
             "Author": "Berin Aniesh <https://berinaniesh.xyz>",
             "Documentation": "https://rest-demo.berinaniesh.pp.ua/docs",
             "Framework": "FastAPI",
             "Language": "Python",
-            "Authentication": "JWT",
-            "Database": "Postgesql",
             "Git Repo": "https://github.com/berinaniesh/rest-demo.git",
             "Contact": "berinaniesh@gmail.com"
             }

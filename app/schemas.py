@@ -30,7 +30,6 @@ class UserOut(BaseModel):
 
 class UserCreate(BaseModel):
     email: EmailStr
-    username: str
     password: str
 
 
