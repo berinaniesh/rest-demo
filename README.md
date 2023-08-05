@@ -1,3 +1,3 @@
-# TNCars FastAPI
+# REST API demo
 
-The API for TNCars written in FastAPI
+The REST backend of a simple CRUD application with FastAPI, JWT, Postgresql and Docker.
